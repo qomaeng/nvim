@@ -2,16 +2,19 @@
 -- https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
 -- Please read that file to know all available options :( 
 
----@type ChadrcConfig
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
+  theme = "poimandres",
+  theme_toggle = { "nord", "poimandres" },
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+  hl_override = {
+    Comment = { italic = true },
+    ["@comment"] = { italic = true },
+  },
+  -- hl_add = {
+  --   NvimTreeOpenedFolderName = { fg = "green", bold = true },
+  -- },
 }
 
 return M
