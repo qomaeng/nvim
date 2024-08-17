@@ -9,32 +9,32 @@ local options = {
     "shfmt",
 
     -- C
-    "clangd",
-    "clang-format",
+    -- "clangd",
+    -- "clang-format",
 
     -- Rust
     "rust-analyzer",
 
     -- Python
-    "pyright",
-    "black",
-    "isort",
-    "flake8",
-    "mypy",
-    "pydocstyle",
+    -- "pyright",
+    -- "black",
+    -- "isort",
+    -- "flake8",
+    -- "mypy",
+    -- "pydocstyle",
 
     -- Web
-    "html-lsp",
-    "css-lsp",
+    -- "html-lsp",
+    -- "css-lsp",
 
     -- Javascript/Typescript
-    "eslint-lsp",
+    -- "eslint-lsp",
     -- "eslint_d",
-    "typescript-language-server",
-    "prettier",
+    -- "typescript-language-server",
+    -- "prettier",
 
     -- Docker
-    "dockerfile-language-server",
+    -- "dockerfile-language-server",
 
     -- Golang
     -- "gopls",
@@ -48,8 +48,8 @@ local options = {
 
     -- Doc
     "marksman",
-    "json-lsp",
-    "yaml-language-server",
+    -- "json-lsp",
+    -- "yaml-language-server",
     "yamlfmt",
     "yamllint",
     "taplo",

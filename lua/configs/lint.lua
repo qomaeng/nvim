@@ -12,7 +12,7 @@ lint.linters_by_ft = {
   -- objc = { "clang_check" },
 
   -- python
-  python = { "flake8", "mypy", "pydocstyle", "trivy" },
+  -- python = { "flake8", "mypy", "pydocstyle", "trivy" },
 
   -- Javascript
   javascript = { "eslint" },
