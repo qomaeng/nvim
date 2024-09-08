@@ -14,21 +14,21 @@ lint.linters_by_ft = {
   -- python
   -- python = { "flake8", "mypy", "pydocstyle", "trivy" },
 
-  -- Javascript
-  javascript = { "eslint" },
-  javascriptreact = { "eslint" },
-  jsx = { "eslint" },
-
-  -- Typescript
-  typescript = { "eslint" },
-  typescriptreact = { "eslint" },
-  tsx = { "eslint" },
+  -- -- Javascript (LSP also support lint)
+  -- javascript = { "eslint" },
+  -- javascriptreact = { "eslint" },
+  -- jsx = { "eslint" },
+  --
+  -- -- Typescript (LSP also support lint)
+  -- typescript = { "eslint" },
+  -- typescriptreact = { "eslint" },
+  -- tsx = { "eslint" },
 
   -- Terraform
   terraform = { "tflint", "trivy" }, -- terraform validate not supported here
 
   -- Doc
-  yaml = { "yamllint" },
+  -- yaml = { "yamllint" },
 }
 
 local augroup = vim.api.nvim_create_augroup("lint", { clear = true })

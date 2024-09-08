@@ -6,7 +6,7 @@ local M = {}
 
 M.base46 = {
   theme = "poimandres",
-  theme_toggle = { "nord", "poimandres" },
+  theme_toggle = { "poimandres", "nord" },
 
   hl_override = {
     Comment = { italic = true },
