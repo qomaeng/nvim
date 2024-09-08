@@ -31,11 +31,11 @@ local servers = {
   -- Javascript/Typescript
   eslint = {},
   ts_ls = {
-    -- init_options = {
-    --   preferences = {
-    --     disableSuggestions = true,
-    --   },
-    -- },
+    init_options = {
+      preferences = {
+        disableSuggestions = true,
+      },
+    },
   },
 
   -- Terraform
