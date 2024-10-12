@@ -34,6 +34,11 @@ map("n", "[c", function()
   end
 end, { desc = "Jump to prev hunk" })
 
+map("n", "<leader>rh", "<CMD>Gitsigns reset_hunk<CR>", { desc = "Git reset hunk" })
+map("n", "<leader>ph", "<CMD>Gitsigns preview_hunk<CR>", { desc = "Git preview hunk" })
+map("n", "<leader>gf", "<CMD>Gitsigns blame<CR>", { desc = "Git blame" })
+map("n", "<leader>gb", "<CMD>Gitsigns blame_line<CR>", { desc = "Git blame line" })
+
 -- Rust
 -- map("n", "<leader>rcu", function()
 --   require("crates").upgrade_all_crates()
