@@ -116,6 +116,16 @@ return {
       { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
     }
   },
+
+  {
+    "iamcco/markdown-preview.nvim",
+    lazy = true,
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function()
+      vim.uv.fn["mkdp#util#install"]()
+    end,
+  },
 }
 
 -- {
