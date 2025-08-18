@@ -39,6 +39,36 @@ map("n", "<leader>ph", "<CMD>Gitsigns preview_hunk<CR>", { desc = "Git preview h
 map("n", "<leader>gf", "<CMD>Gitsigns blame<CR>", { desc = "Git blame" })
 map("n", "<leader>gb", "<CMD>Gitsigns blame_line<CR>", { desc = "Git blame line" })
 
+-- LSP
+map("n", "<leader>cs", function()
+  local diags = vim.diagnostic.get(0)
+  local v = {}
+
+  for _, d in pairs(diags) do
+    table.insert(v, {
+      code = d.code,
+      message = d.message,
+      severity = d.severity,
+      source = d.source or nil,
+      range = {
+        start = { line = d.lnum, character = d.col },
+        ["end"] = { line = d.end_lnum, character = d.end_col },
+      },
+    })
+  end
+
+  vim.lsp.buf.code_action {
+    context = {
+      -- only = { "quickfix" },
+      diagnostics = v,
+    },
+    filter = function(action)
+      return action.isPreferred
+    end,
+    apply = true,
+  }
+end, { desc = "vim.lsp.buf.code_action(preferred)" })
+
 -- Rust
 -- map("n", "<leader>rcu", function()
 --   require("crates").upgrade_all_crates()
