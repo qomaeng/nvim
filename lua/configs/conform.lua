@@ -38,6 +38,9 @@ local options = {
     -- rust_analyzer:
     --   rust
     --
+    -- gopls:
+    --   go
+    --
     -- terraformls:
     --   terraform
     --

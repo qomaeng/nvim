@@ -16,7 +16,7 @@ local servers = {
   pyright = {},
 
   -- Golang
-  -- gopls = {},
+  gopls = {},
 
   -- Protobuf
   --
@@ -27,6 +27,8 @@ local servers = {
   -- HTML
   html = {},
   cssls = {},
+  css_variables = {},
+  tailwindcss = {},
 
   -- Javascript/Typescript
   eslint = {},
