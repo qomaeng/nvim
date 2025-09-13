@@ -2,7 +2,7 @@ return {
   -- Neovim Plugin Manager
   {
     "williamboman/mason.nvim",
-    opts = require "configs.mason"
+    opts = require "configs.mason",
   },
 
   -- Formatter
@@ -32,7 +32,7 @@ return {
   -- Language Syntax
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = require "configs.treesitter"
+    opts = require "configs.treesitter",
   },
 
   -- Auto Completion
@@ -113,8 +113,8 @@ return {
       "nvim-lua/plenary.nvim",
     },
     keys = {
-      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
-    }
+      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    },
   },
 
   {
