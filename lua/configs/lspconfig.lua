@@ -1,7 +1,3 @@
-require("nvchad.configs.lspconfig").defaults()
-
-local lspconfig = require "lspconfig"
-
 local servers = {
   -- Lua
   lua_ls = {},
@@ -59,12 +55,8 @@ local servers = {
   },
 }
 
-local nvlsp = require "nvchad.configs.lspconfig"
-
 for lsp, opts in pairs(servers) do
-  opts.on_init = nvlsp.on_init
-  opts.on_attach = nvlsp.on_attach
-  opts.capabilities = nvlsp.capabilities
-
-  lspconfig[lsp].setup(opts)
+  vim.lsp.config(lsp, opts)
 end
+
+vim.lsp.enable(vim.tbl_keys(servers))
