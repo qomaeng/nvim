@@ -49,7 +49,7 @@ return {
       }
       options.mapping["<CR>"] = {}
 
-      table.insert(options.sources, { name = "crates" })
+      -- table.insert(options.sources, { name = "crates" })
 
       return options
     end,
