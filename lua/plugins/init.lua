@@ -117,14 +117,23 @@ return {
     },
   },
 
+  -- {
+  --   "iamcco/markdown-preview.nvim",
+  --   lazy = true,
+  --   cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  --   ft = { "markdown" },
+  --   build = function()
+  --     vim.uv.fn["mkdp#util#install"]()
+  --   end,
+  -- },
   {
-    "iamcco/markdown-preview.nvim",
-    lazy = true,
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons"
+    },
+    opts = {},
     ft = { "markdown" },
-    build = function()
-      vim.uv.fn["mkdp#util#install"]()
-    end,
   },
 }
 
