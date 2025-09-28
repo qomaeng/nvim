@@ -17,6 +17,7 @@ local options = {
 
     -- Python
     -- "pyright",
+    -- "basedpyright",
     -- "black",
     -- "isort",
     -- "flake8",

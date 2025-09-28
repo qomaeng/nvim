@@ -11,7 +11,7 @@ local servers = {
   rust_analyzer = {},
 
   -- Python
-  pyright = {},
+  basedpyright = {},
 
   -- Golang
   gopls = {},
