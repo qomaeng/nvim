@@ -2,20 +2,27 @@ return {
   -- Neovim Plugin Manager
   {
     "williamboman/mason.nvim",
-    opts = require "configs.mason",
+    opts = function(_, opts)
+      local config = require "configs.mason"
+      return vim.tbl_deep_extend("force", opts or {}, config)
+    end,
   },
 
   -- Formatter
   {
     "stevearc/conform.nvim",
     -- event = "BufWritePre", -- uncomment for format on save
-    opts = require "configs.conform",
+    opts = function(_, opts)
+      local config = require "configs.conform"
+      return vim.tbl_deep_extend("force", opts or {}, config)
+    end,
   },
 
   -- LSP
   {
     "neovim/nvim-lspconfig",
     config = function()
+      require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
   },
@@ -32,26 +39,29 @@ return {
   -- Language Syntax
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = require "configs.treesitter",
+    opts = function(_, opts)
+      local config = require "configs.treesitter"
+      return vim.tbl_deep_extend("force", opts or {}, config)
+    end,
   },
 
   -- Auto Completion
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
-    opts = function()
+    opts = function(_, opts)
       local cmp = require "cmp"
-      local options = require "nvchad.configs.cmp"
+      local config = require "nvchad.configs.cmp"
 
-      options.mapping["<Tab>"] = cmp.mapping.confirm {
+      config.mapping["<Tab>"] = cmp.mapping.confirm {
         behavior = cmp.ConfirmBehavior.Replace,
         select = false,
       }
-      options.mapping["<CR>"] = {}
+      config.mapping["<CR>"] = {}
 
-      -- table.insert(options.sources, { name = "crates" })
+      -- table.insert(config.sources, { name = "crates" })
 
-      return options
+      return vim.tbl_deep_extend("force", opts or {}, config)
     end,
   },
 
