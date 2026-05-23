@@ -14,7 +14,7 @@ local options = {
     rust = { "rustfmt" },
 
     -- Python
-    python = { "ruff", "black" },
+    python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 
     -- Javascript
     javascript = { "prettier" },
