@@ -17,6 +17,11 @@ end, { desc = "Close buffer" })
 -- Easy Motion
 map("n", "f", "<Plug>(easymotion-s2)", { desc = "Multi input find motion" })
 
+-- Telescope
+map("n", "<leader>fr", "<CMD>Telescope resume<CR>", {
+  desc = "telescope resume previous picker",
+})
+
 -- Git
 map("n", "]c", function()
   if vim.wo.diff then
