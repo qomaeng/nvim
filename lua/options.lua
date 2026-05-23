@@ -1,8 +1,6 @@
 require "nvchad.options"
 
-local o = vim.o
-local g = vim.g
+vim.o.relativenumber = true
+vim.o.relativenumber = true
 
-o.relativenumber = true
-
-g.EasyMotion_smartcase = 1
+vim.g.EasyMotion_smartcase = 1
